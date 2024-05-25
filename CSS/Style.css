@@ -1,0 +1,541 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* ========== general setting ========== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--first-color);
+    background-color: var(--body-bg-color);
+    margin: 2rem 0 0 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ========== Variable ========== */
+
+:root {
+    --first-color: #0e2431;
+    --second-color: #6a59d1;
+    --third-color: #777;
+
+    --hover-color: #914fd0;
+
+    --body-bg-color: #fefefe;
+    --card-bg-color: #fff;
+    --modal-bg-color: #fff;
+    --bg-transparent-color: rgba(0, 0, 0, 0.1);
+    --transparent-color-01: rgba(0, 0, 0, 0.1);
+    --transparent-color-02: rgba(106, 89, 209, 0.1);
+    --line-color: #d7d7d7;
+
+    --color-filter: invert(1);
+
+    --box-shadow: 0px 0px 20px rgb(0 0 0/ 10%);
+
+    --small-font: 0.9em;
+    --normal-font: 1em;
+
+    --scroll-bar-color: #c5cadf;
+    --scroll-thumb-color: #70768a;
+    --scroll-thumb-hover-color: #454f6b;
+}
+.dark {
+    --first-color: #fff;
+    --second-color: #6a59d1;
+    --third-color: #a9afc3;
+
+    --hover-color: #914fd0;
+
+    --body-bg-color: #0e1b31;
+    --card-bg-color: #132347;
+    --modal-bg-color: #102048;
+    --bg-transparent-color: rgba(255, 255, 255, 0.1);
+    --transparent-color-01: rgba(255, 255, 255, 0.1);
+    --line-color: #454f6b;
+
+    --color-filter: invert(0);
+
+    --box-shadow: 0px 0px 20px rgb(0 0 0/ 10%);
+
+    --small-font: 0.9em;
+    --normal-font: 1em;
+
+    --scroll-bar-color: #c1ceff;
+    --scroll-thumb-color: #282f4e;
+    --scroll-thumb-hover-color: #454f6b;
+}
+
+/* ========== Commom Styles ========== */
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section {
+    position: relative;
+    width: 1150px;
+    margin: 0 auto;
+    padding: 6rem 2rem 2rem;
+}
+
+.sub-section {
+    position: relative;
+    width: 1150px;
+    margin: 0 auto;
+    padding: 6rem 0;
+}
+
+.section-title-01 {
+    font-size: 4.5em;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    background-clip: text;
+    opacity: 0.1;
+}
+
+.section-title-02 {
+    font-size: 2.5em;
+    font-weight: 700;
+    transform: translateY(-133%);
+}
+
+.container {
+    max-width: 1150px;
+}
+
+.content {
+    width: 1150px;
+    margin: 0 auto;
+}
+
+/* ========== Start Header ========== */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.6 ease;
+    backdrop-filter: blur(20px);
+    z-index: 100;
+}
+
+header .nav-bar {
+    position: relative;
+    height: calc(4rem + 1rem);
+    max-width: 1250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+header .nav-bar .logo {
+    color: var(--first-color);
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+header .nav-bar nav a {
+    color: var(--first-color);
+    font-size: var(--normal-font);
+    font-weight: 500;
+}
+
+header .nav-bar nav a:not(:last-child) {
+    padding-right: 50px;
+}
+
+header .nav-bar nav a:hover {
+    color: var(--second-color);
+}
+
+/* ========== End Header ========== */
+
+/* ========== Start Home ========== */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home {
+    max-width: 1250px;
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4rem 2rem;
+    position: relative;
+}
+.home .home-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.home-container .media-icon {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+
+.home-container .media-icon a {
+    color: var(--second-color);
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.home-container .media-icon a:hover {
+    color: var(--hover-color);
+}
+
+.home-container .info h2 {
+    font-size: 4em;
+    font-weight: 600;
+    line-height: 70px;
+}
+
+.home-container .info h3 {
+    color: var(--third-color);
+    font-weight: 600;
+    line-height: 50px;
+    font-size: 1.3em;
+}
+
+.home-container .info p {
+    color: var(--third-color);
+    max-width: 350px;
+    font-size: var(--normal-font);
+}
+
+.btn {
+    background-color: var(--second-color);
+    color: white;
+    font-size: var(--normal-font);
+    font-weight: 500;
+    padding: 20px 30px;
+    margin-top: 25px;
+    letter-spacing: 1px;
+    display: inline-block;
+    border-radius: 7px;
+}
+
+.btn:hover {
+    background-color: var(--hover-color);
+}
+
+.home-container .home-img {
+    position: relative;
+}
+
+.home-container .home-img img {
+    width: 90%;
+    border-radius: 10%;
+}
+
+.cont {
+    position: relative;
+    flex-direction: column;
+}
+/* ========== End Header ========== */
+
+/* ========== Start About ========== */
+.cont .content {
+    column-gap: 40px;
+    position: relative;
+}
+
+.about-img {
+    position: relative;
+}
+
+.about-img img {
+    max-width: 450px;
+    border-radius: 10px;
+}
+
+.about-info {
+    position: relative;
+}
+
+.about-info .description {
+    max-width: 600px;
+}
+
+.about-info .description h3 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about-info .description h4 {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about-info .description h4 span {
+    color: var(--second-color);
+}
+
+.about-info .description p {
+    color: var(--third-color);
+    font-size: var(--normal-font);
+    margin-bottom: 15px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid var(--line-color);
+}
+
+.about-info .Profitional-list {
+    display: flex;
+    column-gap: 0;
+    justify-content: space-evenly;
+}
+.about-info .Profitional-list .list-item h3 {
+    font-size: 2.5em;
+    font-weight: 700;
+}
+.about-info .Profitional-list .list-item span {
+    color: var(--third-color);
+    font-size: var(--small-font);
+}
+
+/* ========== End About ========== */
+
+.skill-lists {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.skill-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 0.5rem;
+    padding-right: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 4px 4px 4px rgba(14, 36, 49, 0.5);
+    position: relative;
+}
+
+.skill-name > div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.skill-name i {
+    color: var(--second-color);
+    font-size: 25px;
+}
+
+.skill-name > div span {
+    font-weight: 700;
+    font-size: 21px;
+}
+
+.skill-img img {
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.skill-info .info h3 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.skill-info .info p {
+    color: var(--third-color);
+    font-size: var(--normal-font);
+    margin-bottom: 15px;
+    padding-bottom: 25px;
+}
+
+.skill-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--second-color);
+    height: 0.25rem;
+}
+
+/* ========== Start Projects ========== */
+
+.card {
+    padding: 0;
+    width: calc(97% / 3);
+}
+
+.card .card-body {
+    padding: 16px;
+}
+
+.contact .container .content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.content-left h2 {
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.content-left i {
+    color: var(--second-color);
+    font-size: 1.3em;
+    margin-right: 10px;
+}
+
+.content-left span {
+    font-size: var(--normal-font);
+    color: var(--third-color);
+    margin-left: 40px;
+}
+.content-left a {
+    font-size: var(--normal-font);
+    color: var(--third-color);
+}
+
+.contact-list {
+    margin-bottom: 40px;
+}
+
+.contact-list li h3 {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.content-right p {
+    color: var(--third-color);
+    font-size: 1.6em;
+}
+
+.content-right p span {
+    color: var(--first-color);
+    font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: none;
+    color: var(--color-filter);
+    font-size: var(--normal-font);
+    background-color: var(--transparent-color-02);
+    margin-bottom: 20px;
+    padding: 15px 40px 40px 20px;
+    border-radius: 10px;
+}
+
+.first-row input {
+    width: 100%;
+}
+.second-row {
+    display: flex;
+    justify-content: space-between;
+}
+.second-row input {
+    width: 48%;
+}
+.contact-form textarea {
+    width: 100%;
+}
+/* ========== End Projects ========== */
+
+/* ========== Start Footer ========== */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--second-color);
+    width: 100%;
+    margin-top: 50px;
+    padding: 3rem 2rem;
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+.footre-container {
+    display: flex;
+    width: 100%;
+    max-width: 1150px;
+    justify-content: space-between;
+}
+
+.footre-container .about h2 {
+    font-size: 3em;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.footre-container .about p {
+    font-size: var(--normal-font);
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.footre-container .info,
+.footre-container .follow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footre-container .info h3,
+.footre-container .follow h3 {
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.footre-container .info ul,
+.footre-container .follow ul {
+    display: flex;
+}
+
+.footre-container .info a {
+    margin: 20px;
+}
+
+.footre-container .follow a {
+    font-size: 1.5em;
+    margin: 20px;
+}
+
+.footer-copyright {
+    font-size: var(--normal-font);
+    margin-top: 50px;
+    font-weight: 300;
+}
+
+/* ========== End Footer ========== */
